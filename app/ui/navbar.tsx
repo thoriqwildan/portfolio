@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav" className="bg-bgprimary-100 fixed top-0 w-screen">
       <div className="mx-auto max-w-screen-fit  xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -45,7 +45,7 @@ export default function NavBar() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? ' text-white' : 'text-graycustom hover:text-white',
+                      item.current ? ' text-white' : 'text-graycustom hover:text-white transition ease-in-out duration-300',
                       'rounded-md px-3 py-2 text-md font-medium',
                     )}
                   >
@@ -59,10 +59,10 @@ export default function NavBar() {
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="relative flex rounded-full  text-sm focus:outline-none  focus:ring-offset-2 focus:ring-offset-gray-800">
+                <MenuButton className="relative flex rounded-full data-[open]:animate-rotatemin90 text-sm focus:outline-none  focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Setting</span>
-                  <Cog8ToothIcon className='block size-8 text-graycustom'/>
+                  <Cog8ToothIcon className=' block size-8 text-graycustom'/>
                 </MenuButton>
               </div>
               <MenuItems
