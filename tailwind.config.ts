@@ -14,7 +14,8 @@ export default {
         bgprimary: {
           100: "#0D0D0D"
         },
-        graycustom: "#737373"
+        graycustom: "#737373",
+        bluecustom: "#1672b6",
       },
     },
   },
