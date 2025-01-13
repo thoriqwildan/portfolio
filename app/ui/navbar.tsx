@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Blogs', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'About', href: '#About', current: false },
+  { name: 'Blogs', href: '#Blogs', current: false },
+  { name: 'Contact', href: '#Contact', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -16,7 +16,7 @@ function classNames(...classes: string[]) {
 export default function NavBar() {
   return (
     <Disclosure as="nav" className="bg-transparent  ">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-fit  xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -46,7 +46,7 @@ export default function NavBar() {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? ' text-white' : 'text-graycustom hover:text-white',
-                      'rounded-md px-3 py-2 text-base font-medium',
+                      'rounded-md px-3 py-2 text-md font-medium',
                     )}
                   >
                     {item.name}
@@ -59,20 +59,20 @@ export default function NavBar() {
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none  focus:ring-offset-2 focus:ring-offset-gray-800">
+                <MenuButton className="relative flex rounded-full  text-sm focus:outline-none  focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Setting</span>
-                  <Cog8ToothIcon className='block size-6'/>
+                  <Cog8ToothIcon className='block size-8 text-graycustom'/>
                 </MenuButton>
               </div>
               <MenuItems
                 transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-900 py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
                 <MenuItem>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-200 data-[focus]:bg-gray-700 data-[focus]:outline-none"
                   >
                     Your Profile
                   </a>
@@ -80,7 +80,7 @@ export default function NavBar() {
                 <MenuItem>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-200 data-[focus]:bg-gray-700 data-[focus]:outline-none"
                   >
                     Settings
                   </a>
@@ -88,7 +88,7 @@ export default function NavBar() {
                 <MenuItem>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-200 data-[focus]:bg-gray-700 data-[focus]:outline-none"
                   >
                     Sign out
                   </a>
