@@ -30,8 +30,8 @@ export default function NavBar() {
     // }
   };
   return (
-    <Disclosure as="nav" className="bg-bgprimary-100 fixed top-0 w-screen">
-      <div className="mx-auto max-w-screen-fit  xl px-2 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="bg-bgprimary-100 fixed top-0 w-full">
+      <div className="mx-auto max-w-screen-fit px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -81,17 +81,20 @@ export default function NavBar() {
       </div>
 
       <DisclosurePanel className="sm:hidden transition duration-200 ease-in-out delay-150">
-        <div className="space-y-1 px-2 pb-3 pt-2">
+        <div className="space-y-1 pb-3 pt-2">
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
               as="a"
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
+              className={
+                clsx(
+                  'text-gray-300  hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
+                  {
+                    'text-white bg-gray-900' : active === item.href 
+                  }
+                )}
             >
               {item.name}
             </DisclosureButton>

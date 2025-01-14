@@ -12,7 +12,7 @@ export default function Hero() {
                 <p className="text-base  mt-2.5 text-graycustom text-center">Hi! I’m Thoriq, Backend Engineer based in Indonesia.</p>
                 <div className='md:m-7 flex flex-col md:flex-row'>
                 <Link href={'#'} className='transition hover:scale-110 ease-in-out duration-300 md:m-7 my-5 bg-bluecustom rounded-lg px-10 py-2.5 text-sm '>Contact Me</Link>
-                <Link href={'#'} className='transition hover:scale-110 ease-in-out duration-300 border md:m-7 rounded-lg px-12 py-2.5 text-sm'>My CV</Link>
+                <Link href={'#'} className='transition hover:scale-110 ease-in-out duration-300 border md:m-7 rounded-lg px-12 py-2.5 text-sm text-white'>My CV</Link>
                 </div>
             </div>
         <BackgroundBeams/>

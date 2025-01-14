@@ -11,7 +11,7 @@ const About = () => {
             <p className='text-sm'>Saya lulusan SMK Negeri 2 Yogyakarta tahun 2026 jurusan Sistem Informasi Jaringan dan Aplikasi. Saat ini saya merupakan fresh graduate, tetapi saya memiliki pengalaman dan sertifikasi terkait kompetensi yang dimiliki.</p>
         </div>
         <div className='w-1/5 bg-red-800'>
-            <h2>Thoriq Wildan Abdurrasyid</h2>
+            <h2>Thoriq Wildan</h2>
         </div>
     </div>
   )
