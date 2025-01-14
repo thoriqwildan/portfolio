@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
-        className={`${dm_sans.className} bg-bgprimary-100`}
+        className={`${dm_sans.className} bg-bgprimary-100 `}
       >
         {children}
       </body>

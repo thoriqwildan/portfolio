@@ -1,12 +1,18 @@
+'use client'
+
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, Cog8ToothIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
+import { useState } from 'react'
+
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'About', href: '#About', current: false },
-  { name: 'Blogs', href: '#Blogs', current: false },
-  { name: 'Contact', href: '#Contact', current: false },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Blogs', href: '#blogs', current: false },
+  { name: 'Contact', href: '#contact', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -14,6 +20,15 @@ function classNames(...classes: string[]) {
 }
 
 export default function NavBar() {
+  const [active, setActive] = useState('home')
+
+  const handleClick = (section: string) => {
+    setActive(section);
+    // const element = document.getElementById(section);
+    // if (element) {
+    //   element.scrollIntoView({ behavior: 'smooth' });
+    // }
+  };
   return (
     <Disclosure as="nav" className="bg-bgprimary-100 fixed top-0 w-screen">
       <div className="mx-auto max-w-screen-fit  xl px-2 sm:px-6 lg:px-8">
@@ -40,17 +55,20 @@ export default function NavBar() {
             <div className={`hidden sm:ml-8 sm:block`}>
               <div className="flex space-x-5">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? ' text-white' : 'text-graycustom hover:text-white transition ease-in-out duration-300',
-                      'rounded-md px-3 py-2 text-md font-medium',
-                    )}
+                    onClick={() => handleClick(item.href)}
+                    className={clsx(
+                      'text-gray-300  hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
+                      {
+                        'text-white' : active === item.href 
+                      }
+                    )
+                  }
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
