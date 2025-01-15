@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { dm_sans } from "./ui/fonts";
 import { ThemeProvider } from "./components/theme-provider";
+import { BackgroundBeams } from "./ui/background-beams";
 
 export const metadata: Metadata = {
   title: "Thoriq Wildan - Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
+          <BackgroundBeams/>
       </body>
     </html>
   );

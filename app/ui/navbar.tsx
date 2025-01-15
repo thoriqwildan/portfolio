@@ -31,7 +31,7 @@ export default function NavBar() {
     // }
   };
   return (
-    <Disclosure as="nav" className="bg-bgprimary-100 fixed top-0 w-full">
+    <Disclosure as="nav" className="bg-bgprimary-100 fixed z-50 top-0 w-full">
       <div className="mx-auto max-w-screen-fit px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
