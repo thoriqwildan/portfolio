@@ -15,7 +15,7 @@ export default function Hero() {
                     </div>
                     <div className='transition hover:scale-110 ease-in-out duration-300 md:m-7 my-2 border border-white justify-center rounded-lg px-10 py-2.5 flex'>
                         <Link href={'/files/cv-thoriq-2025.pdf'} className='text-sm text-white flex'>My CV</Link>
-                        <ArrowDownTrayIcon className='size-5 ml-2'/>
+                        <ArrowDownTrayIcon className='size-5 ml-2 text-white'/>
                     </div>
                 </div>
             </div>

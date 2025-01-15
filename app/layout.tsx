@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { dm_sans } from "./ui/fonts";
-import { ThemeProvider } from "./components/theme-provider";
 import { BackgroundBeams } from "./ui/background-beams";
 
 export const metadata: Metadata = {
@@ -19,15 +18,8 @@ export default function RootLayout({
       <body
         className={`${dm_sans.className} bg-bgprimary-100 `}
       >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
             {children}
-          </ThemeProvider>
-          <BackgroundBeams/>
+            <BackgroundBeams/>
       </body>
     </html>
   );
