@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { dm_sans } from "./ui/fonts";
+import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Thoriq Wildan - Portfolio",
@@ -17,7 +18,14 @@ export default function RootLayout({
       <body
         className={`${dm_sans.className} bg-bgprimary-100 `}
       >
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );

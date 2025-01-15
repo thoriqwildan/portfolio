@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { useState } from 'react'
+import { ModeToggle } from '../components/dark-button'
 
 
 const navigation = [
@@ -72,8 +73,8 @@ export default function NavBar() {
                 ))}
               </div>
             </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
+          <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <ModeToggle/>
             
           </div>
           </div>

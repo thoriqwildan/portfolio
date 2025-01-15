@@ -1,17 +1,30 @@
 import React from 'react'
+import { CardSpotlight } from './card-spotlight'
+import Image from 'next/image'
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { RepoCard } from '../components/repo-card'
+
 
 const About = () => {
   return (
-    <div id='about' className='flex py-6 flex-row w-full h-96 bg-slate-800'>
-        <div className='w-1/3 bg-red-300'>
-            <h2>Thoriq Wildan Abdurrasyid</h2>
+    <div id='about' className='flex py-6 px-6 md:flex-row w-full justify-around md:px-48 flex-col'>
+        <CardSpotlight className='md:w-2/5 w-full'>
+        <div>
+          <Image
+            src={'/images/contoh-foto.png'}
+            width={800}
+            height={800}
+            alt='Contoh'
+            className='z-20 relative rounded-md'
+          />
+          <h1 className='z-20 relative '>COnto</h1>
         </div>
-        <div className='rounded-lg mx-7 w-1/3 h-48 flex flex-col items-start gap-3 p-4 bg-gray-900'>
-            <h1 className='text-2xl text-graycustom font-bold'>About Me</h1>
-            <p className='text-sm'>Saya lulusan SMK Negeri 2 Yogyakarta tahun 2026 jurusan Sistem Informasi Jaringan dan Aplikasi. Saat ini saya merupakan fresh graduate, tetapi saya memiliki pengalaman dan sertifikasi terkait kompetensi yang dimiliki.</p>
-        </div>
-        <div className='w-1/5 bg-red-800'>
-            <h2>Thoriq Wildan</h2>
+        </CardSpotlight>
+        <div className='rounded-lg md:mx-7 mt-7 md:mt-0 md:w-3/5 md:h-auto w-full flex flex-col border '>   
+            <p className='text-lg p-5'>My GitHub Repo</p>
+            <ScrollArea className='h-80 md:h-80 rounded-md border p-4'>
+            <RepoCard/>
+          </ScrollArea>
         </div>
     </div>
   )
