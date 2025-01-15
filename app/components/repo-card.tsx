@@ -1,9 +1,9 @@
 
 
-export function RepoCard() {
+export function RepoCard({title} : any ) {
     return (
         <>
-        <p>Test</p>
+        <p>{title}</p>
         </>
     )
 }
