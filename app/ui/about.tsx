@@ -8,14 +8,14 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { formatDate } from "../lib/formatDate";
 import Search from "./search";
+import { GithubIcon } from "lucide-react";
 
 export default async function About() {
   const data = await GetData();
   return (
-    <div>
+    <div id="about">
       <div
-        id="about"
-        className="flex py-6 px-6 md:flex-row w-full justify-around md:px-40 flex-col"
+        className="flex py-6 px-6 md:flex-row w-full justify-around md:pt-20 md:px-40 flex-col"
       >
         <CardSpotlight className="md:w-2/5 w-full">
           <div className="justify-center">
@@ -27,7 +27,7 @@ export default async function About() {
               className="z-20 relative rounded-md"
             />
             <h1 className="z-20 relative text-center text-2xl my-3 text-white">
-              About Me!
+              About Me!🚀
             </h1>
             <p className="z-20 relative text-justify text-gray-300">
               Saya lulusan SMK Negeri 2 Yogyakarta tahun 2026 jurusan Sistem
@@ -38,7 +38,10 @@ export default async function About() {
           </div>
         </CardSpotlight>
         <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-3/5 md:h-auto w-full flex flex-col border border-neutral-800 bg-black">
-          <p className="text-xl p-5 text-white">My GitHub Repos</p>
+          <div className="justify-between flex flex-row px-7 py-4">
+            <p className="text-xl text-white">My GitHub Repos</p>
+            <GithubIcon className="text-white self-center text-lg"/>
+          </div>
           <ScrollArea className="h-80 md:h-96 rounded-md border border-neutral-800 m-2 bg-bgprimary-100">
             {data.map((repo: Repository) => (
               <div
@@ -70,10 +73,9 @@ export default async function About() {
       </div>
       <div className="flex px-6 md:flex-row justify-around md:px-40">
             <div className="border border-neutral-800 rounded-lg w-full h-full p-5">
-            <h1 className="z-20 relative text-center text-2xl my-3">
+            <h1 className="z-20 relative text-center text-2xl my-3 text-white">
               Skills
             </h1>
-              <Search placeholder="isi"/>
               <div className="w-full border border-neutral-800 p-3 mt-4">
 
               </div>
