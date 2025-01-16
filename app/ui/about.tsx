@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { CardSpotlight } from "./card-spotlight";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -9,6 +9,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { formatDate } from "../lib/formatDate";
 import Search from "./search";
 import { GithubIcon } from "lucide-react";
+import { AboutSkeleton } from "../components/AboutSkeleton";
 
 export default async function About() {
   const data = await GetData();
@@ -19,13 +20,15 @@ export default async function About() {
       >
         <CardSpotlight className="md:w-2/5 w-full">
           <div className="justify-center">
-            <Image
-              src={"/images/contoh-foto.png"}
-              width={800}
-              height={800}
-              alt="Contoh"
-              className="z-20 relative rounded-md"
-            />
+            <Suspense fallback={<AboutSkeleton/>}>
+              <Image
+                src={"/images/contoh-foto.png"}
+                width={800}
+                height={800}
+                alt="Contoh"
+                className="z-20 relative rounded-md"
+              />
+            </Suspense>
             <h1 className="z-20 relative text-center text-2xl my-3 text-white">
               About Me!🚀
             </h1>

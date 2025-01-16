@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { Suspense } from "react";
+import { ProjectSkeleton } from "../components/AboutSkeleton";
 
 export const HoverEffect = ({
   items,
@@ -52,12 +54,14 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            <Suspense fallback={<ProjectSkeleton/>}>
             <Image 
             src={item.link}
             width={1000}
             height={1000}
             alt={`${item.title}`}
             className="rounded-lg"/>
+            </Suspense>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
