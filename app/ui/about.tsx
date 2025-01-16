@@ -7,7 +7,10 @@ import { Repository } from "../lib/types";
 import Link from "next/link";
 import {
   ArrowUpRightIcon,
+  CircleStackIcon,
+  CloudIcon,
   CommandLineIcon,
+  DocumentTextIcon,
   ServerStackIcon,
   SignalIcon,
 } from "@heroicons/react/24/outline";
@@ -21,6 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {ApiIcon, CellularNetworkIcon, CIcon, SquareLock02Icon, WebProgrammingIcon} from 'hugeicons-react'
 
 export default async function About() {
   const data = await GetData();
@@ -49,7 +53,7 @@ export default async function About() {
             </p>
           </div>
         </CardSpotlight>
-        <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-3/5 md:h-auto w-full flex flex-col border border-neutral-800">
+        <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-3/5 md:h-auto w-full bg-black flex flex-col border border-neutral-800">
         <div className="border border-neutral-800 rounded-lg w-full h-full p-5">
           <h1 className="z-20 relative text-center text-4xl my-3 text-white">
             Skills
@@ -67,26 +71,29 @@ export default async function About() {
                     Backend Engineer
                   </div>
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent defaultChecked>
                   <div className="flex flex-col gap-y-4 my-2">
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 1</h2>
+                        <h2>Server Management</h2>
                         {/* Iconnya disini */}
+                        <ServerStackIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 2</h2>
+                        <h2>Rest API</h2>
                         {/* Iconnya disini */}
+                        <ApiIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 3</h2>
+                        <h2>Backend Web Framework</h2>
                         {/* Iconnya disini */}
+                        <WebProgrammingIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
@@ -103,22 +110,25 @@ export default async function About() {
                 <div className="flex flex-col gap-y-4 my-2">
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 1</h2>
+                        <h2>C++</h2>
                         {/* Iconnya disini */}
+                        <CIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 2</h2>
+                        <h2>MQTT Protocol</h2>
                         {/* Iconnya disini */}
+                        <CellularNetworkIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 3</h2>
+                        <h2>IoT Security</h2>
                         {/* Iconnya disini */}
+                        <SquareLock02Icon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
@@ -136,22 +146,25 @@ export default async function About() {
                 <div className="flex flex-col gap-y-4 my-2">
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 1</h2>
+                        <h2>Cloud Computing</h2>
                         {/* Iconnya disini */}
+                        <CloudIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 2</h2>
+                        <h2>Database Management</h2>
                         {/* Iconnya disini */}
+                        <CircleStackIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
-                        <h2>PENGALAMAN 3</h2>
+                        <h2>Scripting and Automation</h2>
                         {/* Iconnya disini */}
+                        <DocumentTextIcon className="size-5"/>
                       </div>
                       <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
                     </div>
