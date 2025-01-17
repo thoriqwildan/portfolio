@@ -31,7 +31,7 @@ export default async function About() {
   return (
     <div id="about">
       <div className="flex py-6 px-6 md:flex-row w-full justify-around md:pt-20 md:px-40 flex-col">
-        <CardSpotlight className="md:w-2/5 w-full">
+        <CardSpotlight className="md:w-1/2 w-full">
           <div className="justify-center">
             <Suspense fallback={<AboutSkeleton />}>
               <Image
@@ -53,7 +53,7 @@ export default async function About() {
             </p>
           </div>
         </CardSpotlight>
-        <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-3/5 md:h-auto w-full bg-black flex flex-col border border-neutral-800">
+        <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-1/2 md:h-auto w-full bg-black flex flex-col border border-neutral-800">
         <div className="border border-neutral-800 rounded-lg w-full h-full p-5">
           <h1 className="z-20 relative text-center text-4xl my-3 text-white">
             Skills
@@ -79,7 +79,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <ServerStackIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r from-bluecustom to-blue-900"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -87,7 +87,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <ApiIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -95,7 +95,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <WebProgrammingIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                   </div>
                 </AccordionContent>
@@ -114,7 +114,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <CIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -122,7 +122,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <CellularNetworkIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -130,7 +130,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <SquareLock02Icon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                   </div>
                 </AccordionContent>
@@ -150,7 +150,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <CloudIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -158,7 +158,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <CircleStackIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                     <div className="flex flex-col gap-y-1">
                       <div className="flex flex-row justify-between">
@@ -166,7 +166,7 @@ export default async function About() {
                         {/* Iconnya disini */}
                         <DocumentTextIcon className="size-5"/>
                       </div>
-                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r bg-bluecustom "/>
+                      <div className="w-full h-[2px] rounded-lg bg-gradient-to-r  from-bluecustom to-blue-900 "/>
                     </div>
                   </div>
                 </AccordionContent>
