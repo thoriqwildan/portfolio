@@ -76,9 +76,9 @@ export default function NavBar() {
                     href={item.href}
                     onClick={() => handleClick(item.href)}
                     className={clsx(
-                      ' dark:text-gray-300  hover:text-graycustom dark:hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
+                      ' dark:text-gray-300 text-graycustom hover:text-black dark:hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
                       {
-                        'text-white' : active === item.href 
+                        'text-black' : active === item.href 
                       }
                     )
                   }
