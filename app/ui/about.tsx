@@ -30,8 +30,8 @@ export default async function About() {
   const data = await GetData();
   return (
     <div id="about">
-      <div className="flex py-6 px-6 md:flex-row w-full justify-around md:pt-20 md:px-40 flex-col">
-        <CardSpotlight className="md:w-1/2 w-full">
+      <div className="flex py-6 px-6 lg:flex-row w-full justify-around lg:pt-20 lg:px-40 flex-col">
+        <CardSpotlight className="lg:w-1/2 w-full">
           <div className="justify-center">
             <Suspense fallback={<AboutSkeleton />}>
               <Image
@@ -53,7 +53,7 @@ export default async function About() {
             </p>
           </div>
         </CardSpotlight>
-        <div className="rounded-lg md:ml-7 mt-7 md:mt-0 md:w-1/2 md:h-auto w-full bg-black flex flex-col border border-neutral-800">
+        <div className="rounded-lg lg:ml-7 mt-7 lg:mt-0 lg:w-1/2 lg:h-auto w-full bg-black flex flex-col border border-neutral-800">
         <div className="border border-neutral-800 rounded-lg w-full h-full p-5">
           <h1 className="z-20 relative text-center text-4xl my-3 text-white">
             Skills
@@ -177,12 +177,12 @@ export default async function About() {
       </div>
         
       </div>
-      <div className="flex px-1 flex-col mx-5 justify-around md:mx-[25%] rounded-lg border border-neutral-800 bg-black">
+      <div className="flex px-1 flex-col mx-5 justify-around lg:mx-[25%] rounded-lg border border-neutral-800 bg-black">
           <div className="justify-between flex px-7 py-5">
             <p className="text-xl text-white">My GitHub Repos</p>
             <GithubIcon className="text-white self-center text-lg" />
           </div>
-          <ScrollArea className="h-80 md:h-96 rounded-md border border-neutral-800 m-2 bg-bgprimary-100">
+          <ScrollArea className="h-80 lg:h-96 rounded-md border border-neutral-800 m-2 bg-bgprimary-100">
             {data.map((repo: Repository) => (
               <div
                 key={repo.id}
@@ -194,7 +194,7 @@ export default async function About() {
                 >
                   <div className="flex flex-row justify-between">
                     <p className="text-lg">{repo.name}</p>
-                    <ArrowUpRightIcon className="size-3 md:size-4" />
+                    <ArrowUpRightIcon className="size-3 lg:size-4" />
                   </div>
                   <div className="flex flex-row justify-between mt-4">
                     <p
