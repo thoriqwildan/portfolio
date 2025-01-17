@@ -31,38 +31,39 @@ export default async function About() {
   return (
     <div id="about">
       <div className="flex py-6 px-6 lg:flex-row w-full justify-around lg:pt-20 lg:px-40 flex-col">
-        <CardSpotlight className="lg:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full lg:mr-4 p-5 lg:p-10 dark:border border-neutral-800 rounded-lg dark:bg-black dark:border-neutral-800">
           <div className="justify-center">
             <Suspense fallback={<AboutSkeleton />}>
               <Image
-                src={"/images/contoh-foto.png"}
+                src={"/images/main-foto.png"}
                 width={800}
                 height={800}
                 alt="Contoh"
                 className="z-20 relative rounded-md"
               />
             </Suspense>
-            <h1 className="z-20 relative text-center text-2xl my-3 text-white">
+            <h1 className="z-20 relative text-center text-2xl my-3 dark:text-white">
               About Me!🚀
             </h1>
-            <p className="z-20 relative text-justify text-gray-300">
+            <p className="z-20 relative text-justify text-gray-600 dark:text-gray-300">
               Saya lulusan SMK Negeri 2 Yogyakarta tahun 2026 jurusan Sistem
               Informasi Jaringan dan Aplikasi. Saat ini saya merupakan fresh
               graduate, tetapi saya memiliki pengalaman dan sertifikasi terkait
               kompetensi yang dimiliki.
             </p>
           </div>
-        </CardSpotlight>
-        <div className="rounded-lg lg:ml-7 mt-7 lg:mt-0 lg:w-1/2 lg:h-auto w-full bg-black flex flex-col border border-neutral-800">
-        <div className="border border-neutral-800 rounded-lg w-full h-full p-5">
-          <h1 className="z-20 relative text-center text-4xl my-3 text-white">
+        </div>
+        <div className="bg-black w-[1px] h-auto dark:hidden"/>
+        <div className="rounded-lg lg:ml-4 mt-7 lg:mt-0 lg:w-1/2 lg:h-auto w-full dark:bg-black flex flex-col dark:border border-neutral-800">
+        <div className="dark:border border-neutral-800 rounded-lg w-full h-full lg:p-5">
+          <h1 className="z-20 relative text-center text-4xl my-3 dark:text-white">
             Skills
           </h1>
           <div className="w-full  p-3 mt-4">
             <Accordion
               type="single"
               collapsible
-              className=" w-full text-3xl text-white"
+              className=" w-full text-3xl dark:text-white"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger>
@@ -177,20 +178,20 @@ export default async function About() {
       </div>
         
       </div>
-      <div className="flex px-1 flex-col mx-5 justify-around lg:mx-[25%] rounded-lg border border-neutral-800 bg-black">
+      <div className="flex px-1 flex-col mx-5 justify-around lg:mx-[25%] rounded-lg shadow-2xl dark:border border-neutral-800 bg-gray-200 dark:bg-black">
           <div className="justify-between flex px-7 py-5">
-            <p className="text-xl text-white">My GitHub Repos</p>
-            <GithubIcon className="text-white self-center text-lg" />
+            <p className="text-xl dark:text-white">My GitHub Repos</p>
+            <GithubIcon className="dark:text-white self-center text-lg" />
           </div>
-          <ScrollArea className="h-80 lg:h-96 rounded-md border border-neutral-800 m-2 bg-bgprimary-100">
+          <ScrollArea className="h-80 lg:h-96 rounded-md border shadow-inner dark:border-neutral-800 m-2 bg-white dark:bg-bgprimary-100">
             {data.map((repo: Repository) => (
               <div
                 key={repo.id}
-                className="transition hover:scale-[1.02] ease-in-out duration-300 w-full border border-neutral-800 rounded-sm p-3 mt-0"
+                className="transition hover:scale-[1.02] ease-in-out duration-300 w-full border dark:border-neutral-800 rounded-sm p-3 mt-0"
               >
                 <Link
                   href={repo.html_url}
-                  className="place-content-between text-white"
+                  className="place-content-between dark:text-white"
                 >
                   <div className="flex flex-row justify-between">
                     <p className="text-lg">{repo.name}</p>
@@ -200,7 +201,7 @@ export default async function About() {
                     <p
                       className={
                         repo.language
-                          ? "py-0.5 px-2 rounded-2xl bg-slate-500 text-xs"
+                          ? "py-0.5 px-2 rounded-2xl text-white bg-bluecustom dark:bg-slate-500 text-xs"
                           : ""
                       }
                     >

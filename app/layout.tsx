@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { dm_sans } from "./ui/fonts";
 import { BackgroundBeams } from "./ui/background-beams";
+import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Thoriq Wildan - Portfolio",
@@ -14,12 +15,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth dark:bg-bgprimary-100">
       <body
-        className={`${dm_sans.className} bg-bgprimary-100 `}
+        className={`${dm_sans.className}`}
       >
-            {children}
-            <BackgroundBeams/>
+        <ThemeProvider 
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <BackgroundBeams/>
+        </ThemeProvider>
       </body>
     </html>
   );
