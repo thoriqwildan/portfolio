@@ -4,6 +4,7 @@ import { Label } from "../ui/label";
 import { Input, TextArea } from "../ui/input";
 import { cn } from "@/lib/utils";
 import emailjs from '@emailjs/browser';
+import { toast } from 'sonner'
 
 export default function EmailForm() {
   const [firstname, setFirstname] = useState('')
@@ -28,6 +29,7 @@ export default function EmailForm() {
     emailjs.send(service_id, template_id, templateParams, public_key)
       .then((res) => {
         console.log('Email sent Successfully!', res)
+        toast.success('Email sent Successfully!')
         setFirstname('')
         setLastname('')
         setEmail('')
@@ -35,6 +37,7 @@ export default function EmailForm() {
       })
       .catch((err) => {
         console.error('Error sending email :', err)
+        toast.error('Email not send!')
       })
   }
 
@@ -44,16 +47,16 @@ export default function EmailForm() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)}/>
+            <Input id="firstname" placeholder="Tyler" type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} required/>
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
+            <Input id="lastname" placeholder="Durden" type="text" value={lastname} onChange={(e) => setLastname(e.target.value)} required/>
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <Input id="email" placeholder="example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Enter your Message</Label>
@@ -62,6 +65,7 @@ export default function EmailForm() {
             placeholder="Message Here"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            required
           />
         </LabelInputContainer>
  

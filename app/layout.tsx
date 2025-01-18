@@ -3,6 +3,7 @@ import "./globals.css";
 import { dm_sans } from "./ui/fonts";
 import { BackgroundBeams } from "./ui/background-beams";
 import { ThemeProvider } from "./components/theme-provider";
+import { Toaster, toast } from 'sonner'
 
 export const metadata: Metadata = {
   title: "Thoriq Wildan - Portfolio",
@@ -27,6 +28,7 @@ export default function RootLayout({
         >
           {children}
           <BackgroundBeams/>
+          <Toaster expand={true} richColors position="top-center"/>
         </ThemeProvider>
       </body>
     </html>
