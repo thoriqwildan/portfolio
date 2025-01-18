@@ -1,32 +1,67 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input, TextArea } from "../ui/input";
 import { cn } from "@/lib/utils";
+import emailjs from '@emailjs/browser';
 
 export default function EmailForm() {
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = (e: { preventDefault: any; }) => {
+    e.preventDefault()
+
+    const service_id = 'service_7f68pnt'
+    const template_id = 'template_bhh1kkj'
+    const public_key = 'kSuv8rhdz8stQfCka'
+
+    const templateParams = {
+      from_name: firstname + ' ' + lastname,
+      from_email: email,
+      to_name: 'Thoriq Wildan',
+      message: message
+    }
+
+    emailjs.send(service_id, template_id, templateParams, public_key)
+      .then((res) => {
+        console.log('Email sent Successfully!', res)
+        setFirstname('')
+        setLastname('')
+        setEmail('')
+        setMessage('')
+      })
+      .catch((err) => {
+        console.error('Error sending email :', err)
+      })
+  }
+
     return (
         <div className="max-w-md w-full mx-auto rounded-3xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="Tyler" type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)}/>
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Durden" type="text" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="example@gmail.com" type="email" />
+          <Input id="email" placeholder="example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Enter your Message</Label>
           <TextArea
             id="message"
             placeholder="Message Here"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </LabelInputContainer>
  

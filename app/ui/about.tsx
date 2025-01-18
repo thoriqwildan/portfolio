@@ -46,10 +46,7 @@ export default async function About() {
               About Me!🚀
             </h1>
             <p className="z-20 relative text-justify text-gray-600 dark:text-gray-300">
-              Saya lulusan SMK Negeri 2 Yogyakarta tahun 2026 jurusan Sistem
-              Informasi Jaringan dan Aplikasi. Saat ini saya merupakan fresh
-              graduate, tetapi saya memiliki pengalaman dan sertifikasi terkait
-              kompetensi yang dimiliki.
+            Hi, my name is Thoriq Wildan Abdurrosyid. you can call me Thoriq. I currently attend SMK Negeri 2 Yogyakarta. Have an interest in programming and server management. I'm still learning and currently learning TypeScript.
             </p>
           </div>
         </div>
