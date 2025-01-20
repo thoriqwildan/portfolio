@@ -14,7 +14,7 @@ export default function Hero() {
                 <p className="text-base mx-1 mt-2.5 text-graycustom text-center">Hi! I’m Thoriq, Backend Engineer based in Indonesia.</p>
                 <div className='md:m-7 mx-4 flex flex-col md:flex-row'>
                     <div className='transition hover:scale-110 ease-in-out duration-300 shadow-md bg-bluecustom md:m-7 my-5 justify-center rounded-lg px-10 py-2.5 flex'>
-                        <Link href={'#'} className='text-sm text-white'>Contact Me</Link>
+                        <Link href={'#contact'} className='text-sm text-white'>Contact Me</Link>
                     </div>
                     <div className='transition hover:scale-110 ease-in-out duration-300 md:m-7 my-2 border border-black dark:border-white justify-center rounded-lg px-10 py-2.5 flex'>
                         <Link href={'/files/cv-thoriq-2025.pdf'} className='text-sm dark:text-white flex w-full justify-center'>
