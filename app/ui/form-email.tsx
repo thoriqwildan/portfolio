@@ -25,15 +25,15 @@ export default function EmailForm() {
       to_name: 'Thoriq Wildan',
       message: message
     }
+    setFirstname('')
+    setLastname('')
+    setEmail('')
+    setMessage('')
 
     emailjs.send(service_id, template_id, templateParams, public_key)
       .then((res) => {
         console.log('Email sent Successfully!', res)
         toast.success('Email sent Successfully!')
-        setFirstname('')
-        setLastname('')
-        setEmail('')
-        setMessage('')
       })
       .catch((err) => {
         console.error('Error sending email :', err)

@@ -117,9 +117,9 @@ export default function NavBar() {
               aria-current={item.current ? 'page' : undefined}
               className={
                 clsx(
-                  'text-gray-300  hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
+                  'dark:text-gray-300 text-graycustom hover:text-black dark:hover:text-white transition ease-in-out duration-300 block rounded-md px-3 py-2 text-base font-medium',
                   {
-                    'text-white bg-gray-900' : active === item.href 
+                    'text-black' : active === item.href 
                   }
                 )}
             >
