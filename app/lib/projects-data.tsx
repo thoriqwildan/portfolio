@@ -1,21 +1,15 @@
 export const projectsData = [
     {
-      title: "Stripe",
+      title: "My Portfolio",
       description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "/images/contoh-project.png",
+        "This is a personal portfolio website that contains skills, a github repository, and a list of projects that have been done.",
+      link: "/images/porto-project.png",
     },
     {
-      title: "Netflix",
+      title: "Harja Smart Green House",
       description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "/images/contoh-project.png",
-    },
-    {
-      title: "Google",
-      description:
-        "A multinational technology company that specializes in Internet-related services and products.",
-      link: "/images/contoh-project.png",
+        "This tool can monitor and control the Green House remotely using a website-based internet (IoT) using the MQTT protocol.",
+      link: "/images/harja-project.jpg",
     },
     // {
     //   title: "Meta",

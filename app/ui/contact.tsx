@@ -1,4 +1,4 @@
-import { Location03Icon, Mail01Icon, TelephoneIcon } from "hugeicons-react";
+import { Github01Icon, InstagramIcon, Location03Icon, Mail01Icon, TelephoneIcon } from "hugeicons-react";
 import EmailForm from "./form-email";
 import { GridBeam } from "./GridBeam";
 
@@ -22,10 +22,10 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="w-full h-20 content-center flex flex-row p-1">
-                        <TelephoneIcon className="lg:size-10 size-6 self-center"/>
+                        <InstagramIcon className="lg:size-10 size-6 self-center"/>
                         <div className="place-content-center ml-3">
-                            <p className="text-lg">Phone Number</p>
-                            <p className="text-graycustom">+62 821-3493-0536</p>
+                            <p className="text-lg">Instagram</p>
+                            <p className="text-graycustom">@trqwildann.exe</p>
                         </div>
                     </div>
                     <div className="w-full h-20 content-center flex flex-row p-1">
@@ -33,6 +33,13 @@ export default function Contact() {
                         <div className="place-content-center ml-3">
                             <p className="text-lg">Location</p>
                             <p className="text-graycustom">Yogyakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <div className="w-full h-20 content-center flex flex-row p-1">
+                        <Github01Icon className="lg:size-10 size-6 self-center"/>
+                        <div className="place-content-center ml-3">
+                            <p className="text-lg">Github</p>
+                            <p className="text-graycustom">github.com/thoriqwildan</p>
                         </div>
                     </div>
                 </div>

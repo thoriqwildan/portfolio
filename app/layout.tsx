@@ -8,6 +8,13 @@ import { Toaster, toast } from 'sonner'
 export const metadata: Metadata = {
   title: "Thoriq Wildan - Portfolio",
   description: "Thoriq's Portfolio",
+  openGraph:{
+    images: [
+      {
+        url: ''
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
