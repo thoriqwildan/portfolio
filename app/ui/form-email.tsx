@@ -70,7 +70,7 @@ export default function EmailForm() {
         </LabelInputContainer>
  
         <button
-          className="bg-gradient-to-br relative group/btn from-bluecustom dark:from-zinc-900 dark:to-zinc-900 to-neutral-4  00 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="shadow-md bg-bluecustom  w-full text-white rounded-md h-10 font-medium transition hover:scale-105 ease-in-out duration-300"
           type="submit"
         >
           Send to Me &rarr;

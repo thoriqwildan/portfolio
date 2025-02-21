@@ -15,7 +15,7 @@ export default function Contact() {
                 <p className="text-center place-content-center my-5 lg:my-0">Or</p>
                 <div className="lg:w-1/3 w-full bg-white p-5 dark:bg-black shadow-2xl h-auto justify-center relative z-10 rounded-3xl border border-x-gray-700">
                     <div className="h-20 content-center flex flex-row p-1">
-                        <Mail01Icon className=" size-10 self-center"/>
+                        <Mail01Icon className="lg:size-10 size-6 self-center"/>
                         <div className="place-content-center ml-3">
                             <p className="text-lg">Email</p>
                             <p className="text-graycustom">wildanthoriq14@gmail.com</p>

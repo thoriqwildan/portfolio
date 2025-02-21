@@ -4,19 +4,22 @@ export const projectsData = [
       description:
         "This is a personal portfolio website that contains skills, a github repository, and a list of projects that have been done.",
       link: "/images/porto-project.png",
+      url: ""
     },
     {
       title: "Harja Smart Green House",
       description:
         "This tool can monitor and control the Green House remotely using a website-based internet (IoT) using the MQTT protocol.",
       link: "/images/harja-project.jpg",
+      url: "https://github.com/thoriqwildan/harja-smartgreen"
     },
-    // {
-    //   title: "Meta",
-    //   description:
-    //     "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    //   link: "/images/contoh-project.png",
-    // },
+    {
+      title: "Co-Working Space API",
+      description:
+        "This is an API used for Co-Working Space projects, or also space rentals for startup companies.",
+      link: "/images/co-working-project.png",
+      url: "https://github.com/thoriqwildan/co-working-space"
+    },
     // {
     //   title: "Amazon",
     //   description:
